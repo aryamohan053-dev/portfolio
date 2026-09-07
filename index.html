@@ -1,1348 +1,816 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Arya T A | Python Full Stack Developer</title>
-
-<meta name="description"
-content="Arya T A - Python Full Stack Developer and MCA Graduate. Portfolio showcasing Python, Django, React.js and web development projects.">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-rel="stylesheet">
-
-<style>
-
-/* =========================
-   GENERAL
-========================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
-}
-
-body {
-    background: #0f172a;
-    color: white;
-    line-height: 1.6;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
-
-
-/* =========================
-   HEADER
-========================= */
-
-header {
-    padding: 20px 0;
-    position: sticky;
-    top: 0;
-    background: rgba(15, 23, 42, 0.97);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-    border-bottom: 1px solid #1e293b;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 28px;
-    font-weight: 700;
-    color: #38bdf8;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 25px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: 500;
-    transition: 0.3s;
-}
-
-nav ul li a:hover {
-    color: #38bdf8;
-}
-
-
-/* =========================
-   HOME
-========================= */
-
-.hero {
-    min-height: 90vh;
-    display: flex;
-    align-items: center;
-    padding: 60px 0;
-}
-
-.hero-container {
-    width: 92%;
-    max-width: 1300px;
-    margin: auto;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 80px;
-}
-
-.hero-content {
-    flex: 1;
-    max-width: 650px;
-}
-
-.welcome-text {
-    color: #38bdf8;
-    font-size: 15px;
-    font-weight: 600;
-    letter-spacing: 3px;
-    margin-bottom: 15px;
-}
-
-.hero h1 {
-    font-size: 60px;
-    line-height: 1.2;
-}
-
-.hero h1 span {
-    color: #38bdf8;
-}
-
-.hero h2 {
-    font-size: 28px;
-    margin-top: 15px;
-    color: #e2e8f0;
-}
-
-.hero-description {
-    margin: 20px 0;
-    font-size: 18px;
-    color: #cbd5e1;
-    line-height: 1.8;
-}
-
-
-/* =========================
-   LARGE HOME IMAGE
-========================= */
-
-.hero-image {
-    flex: 1;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero-image img {
-    width: 600px;
-    height: 600px;
-
-    object-fit: cover;
-
-    /* NO BORDER */
-    border: none;
-    outline: none;
-    box-shadow: none;
-
-    border-radius: 20px;
-
-    transition: 0.4s ease;
-}
-
-.hero-image img:hover {
-    transform: scale(1.03);
-}
-
-
-/* =========================
-   BUTTONS
-========================= */
-
-.btn {
-    display: inline-block;
-
-    padding: 12px 25px;
-
-    background: #38bdf8;
-    color: #020617;
-
-    text-decoration: none;
-
-    border-radius: 8px;
-
-    font-weight: 600;
-
-    margin: 10px 5px;
-
-    transition: 0.3s;
-}
-
-.btn:hover {
-    transform: translateY(-3px);
-    background: #7dd3fc;
-
-    box-shadow: 0 8px 20px rgba(56, 189, 248, 0.25);
-}
-
-.btn-outline {
-    background: transparent;
-    border: 2px solid #38bdf8;
-    color: #38bdf8;
-}
-
-.btn-outline:hover {
-    background: #38bdf8;
-    color: #020617;
-}
-
-
-/* =========================
-   SECTIONS
-========================= */
-
-section {
-    padding: 90px 0;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 50px;
-    font-size: 40px;
-    color: #38bdf8;
-}
-
-
-/* =========================
-   ABOUT
-========================= */
-
-.about-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 60px;
-    max-width: 1050px;
-    margin: auto;
-}
-
-.about-image {
-    flex-shrink: 0;
-    text-align: center;
-}
-
-.about-image img {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: none;
-    box-shadow: none;
-}
-
-.about-text {
-    flex: 1;
-}
-
-.about-text h3 {
-    font-size: 28px;
-    margin-bottom: 15px;
-}
-
-.about-text h3 span {
-    color: #38bdf8;
-}
-
-.about-text p {
-    color: #cbd5e1;
-    font-size: 17px;
-    margin-bottom: 15px;
-}
-
-.about-highlights {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    margin-top: 25px;
-}
-
-.highlight {
-    background: #1e293b;
-    padding: 15px;
-    border-radius: 10px;
-    border-left: 3px solid #38bdf8;
-}
-
-.highlight strong {
-    color: #38bdf8;
-}
-
-
-/* =========================
-   SERVICES
-========================= */
-
-.services-intro {
-    max-width: 700px;
-    margin: -25px auto 45px;
-    text-align: center;
-    color: #cbd5e1;
-    font-size: 17px;
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    max-width: 1100px;
-    margin: auto;
-}
-
-.service-card {
-    background: #1e293b;
-    padding: 35px 25px;
-    border-radius: 15px;
-    text-align: center;
-    border: 1px solid #334155;
-    transition: 0.3s ease;
-}
-
-.service-card:hover {
-    transform: translateY(-8px);
-    border-color: #38bdf8;
-    box-shadow: 0 10px 30px rgba(56, 189, 248, 0.15);
-}
-
-.service-icon {
-    font-size: 45px;
-    margin-bottom: 15px;
-}
-
-.service-card h3 {
-    color: #38bdf8;
-    font-size: 21px;
-    margin-bottom: 12px;
-}
-
-.service-card p {
-    color: #cbd5e1;
-    font-size: 15px;
-    line-height: 1.7;
-}
-
-
-/* =========================
-   SKILLS
-========================= */
-
-.skills {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 20px;
-}
-
-.skill {
-    background: #1e293b;
-    padding: 22px;
-    border-radius: 12px;
-    text-align: center;
-    font-weight: 500;
-    transition: 0.3s;
-    border: 1px solid transparent;
-}
-
-.skill:hover {
-    transform: translateY(-5px);
-    border-color: #38bdf8;
-    color: #38bdf8;
-}
-
-
-/* =========================
-   PROJECTS
-========================= */
-
-.projects {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.project-card {
-    background: #1e293b;
-    border-radius: 15px;
-    overflow: hidden;
-    transition: 0.3s;
-    border: 1px solid #334155;
-}
-
-.project-card:hover {
-    transform: translateY(-8px);
-    border-color: #38bdf8;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-.project-top {
-    height: 8px;
-    background: #38bdf8;
-}
-
-.project-content {
-    padding: 25px;
-}
-
-.project-content h3 {
-    margin-bottom: 12px;
-    font-size: 21px;
-}
-
-.project-content p {
-    color: #cbd5e1;
-    margin-bottom: 15px;
-    font-size: 15px;
-}
-
-.tech {
-    color: #38bdf8;
-    font-size: 14px;
-    margin-bottom: 20px;
-    font-weight: 500;
-}
-
-.project-btn {
-    display: inline-block;
-    padding: 9px 18px;
-    border: 1px solid #38bdf8;
-    border-radius: 7px;
-    color: #38bdf8;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.project-btn:hover {
-    background: #38bdf8;
-    color: #020617;
-}
-
-
-/* =========================
-   ALL PROJECTS
-========================= */
-
-.all-projects {
-    text-align: center;
-    margin-top: 50px;
-    padding: 30px;
-    background: #1e293b;
-    border-radius: 15px;
-    border: 1px solid #334155;
-}
-
-.all-projects p {
-    color: #cbd5e1;
-    margin-bottom: 15px;
-}
-
-.all-projects-btn {
-    display: inline-block;
-    padding: 12px 25px;
-    background: #38bdf8;
-    color: #020617;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.all-projects-btn:hover {
-    transform: translateY(-3px);
-    background: #7dd3fc;
-}
-
-
-/* =========================
-   CONTACT
-========================= */
-
-.contact {
-    text-align: center;
-}
-
-.contact-content {
-    max-width: 700px;
-    margin: auto;
-    background: #1e293b;
-    padding: 35px;
-    border-radius: 15px;
-    border: 1px solid #334155;
-}
-
-.contact-item {
-    margin: 18px 0;
-    font-size: 17px;
-}
-
-.contact-item strong {
-    color: #38bdf8;
-}
-
-.contact a {
-    color: #38bdf8;
-    text-decoration: none;
-}
-
-.contact a:hover {
-    text-decoration: underline;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-    text-align: center;
-    padding: 30px;
-    background: #020617;
-    color: #94a3b8;
-}
-
-
-/* =========================
-   SCROLL ANIMATION
-========================= */
-
-.fade {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: 1s;
-}
-
-.fade.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-
-/* =========================
-   TABLET
-========================= */
-
-@media(max-width: 1100px) {
-
-    .hero-container {
-        gap: 40px;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arya T A · Python Full Stack Developer</title>
+  <meta name="description" content="Arya T A – Python Full Stack Developer & MCA Graduate. Portfolio showcasing Python, Django, React.js, and modern web projects." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+  <style>
+    /* ----- global reset & base ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    .hero h1 {
-        font-size: 50px;
+    body {
+      background: #0b1120;
+      color: #e8edf5;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
     }
 
-    .hero-image img {
-        width: 630px;
-        height: 630px;
-    }
-}
-
-
-@media(max-width: 900px) {
-
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .container {
+      width: 92%;
+      max-width: 1280px;
+      margin: 0 auto;
     }
 
-    .projects {
-        grid-template-columns: repeat(2, 1fr);
+    /* ----- sticky header ----- */
+    header {
+      padding: 18px 0;
+      position: sticky;
+      top: 0;
+      background: rgba(11, 17, 32, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      z-index: 999;
+      border-bottom: 1px solid rgba(56, 189, 248, 0.15);
     }
-
-    .about-content {
-        gap: 40px;
-    }
-
-    .about-image img {
-        width: 270px;
-        height: 270px;
-    }
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width: 768px) {
 
     nav {
-        flex-direction: column;
-        gap: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
     }
 
-    nav ul {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
+    .logo {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      color: #f0f6ff;
+      background: linear-gradient(135deg, #38bdf8, #818cf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #cbd5e1;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+      letter-spacing: 0.2px;
+    }
+
+    .nav-links a:hover {
+      color: #7dd3fc;
+    }
+
+    /* ----- hero section ----- */
     .hero {
-        min-height: auto;
-        padding: 70px 0;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      padding: 40px 0 60px;
     }
 
-    .hero-container {
-        flex-direction: column-reverse;
-        text-align: center;
-        gap: 40px;
+    .hero-grid {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 60px;
     }
 
     .hero-content {
-        max-width: 100%;
+      flex: 1 1 50%;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(56, 189, 248, 0.12);
+      color: #7dd3fc;
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      padding: 6px 16px;
+      border-radius: 40px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(56, 189, 248, 0.2);
     }
 
     .hero h1 {
-        font-size: 40px;
+      font-size: 4.2rem;
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -1px;
     }
 
-    .hero h2 {
-        font-size: 23px;
+    .hero h1 span {
+      color: #38bdf8;
+      background: linear-gradient(145deg, #38bdf8, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
-    .hero-description {
-        font-size: 17px;
+    .hero-sub {
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: #a5b4d0;
+      margin-top: 8px;
     }
 
-    .hero-image img {
-        width: 350px;
-        height: 350px;
+    .hero-desc {
+      margin: 22px 0 28px;
+      font-size: 1.1rem;
+      color: #b9c7e0;
+      max-width: 540px;
+      line-height: 1.8;
     }
 
-    .about-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-text {
-        text-align: center;
-    }
-
-    .about-highlights {
-        grid-template-columns: 1fr;
-    }
-
-    .section-title {
-        font-size: 32px;
-    }
-
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .projects {
-        grid-template-columns: 1fr;
-    }
-}
-
-
-/* =========================
-   SMALL MOBILE
-========================= */
-
-@media(max-width: 480px) {
-
-    .logo {
-        font-size: 24px;
-    }
-
-    nav ul {
-        gap: 10px;
-    }
-
-    nav ul li a {
-        font-size: 13px;
-    }
-
-    .hero h1 {
-        font-size: 32px;
-    }
-
-    .hero h2 {
-        font-size: 20px;
-    }
-
-    .welcome-text {
-        font-size: 12px;
-        letter-spacing: 2px;
-    }
-
-    .hero-image img {
-        width: 290px;
-        height: 290px;
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
     }
 
     .btn {
-        display: block;
-        width: 230px;
-        margin: 10px auto;
+      display: inline-block;
+      padding: 12px 28px;
+      font-weight: 600;
+      border-radius: 40px;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      background: #38bdf8;
+      color: #0b1120;
+      border: 1px solid transparent;
+      font-size: 0.95rem;
+      letter-spacing: 0.2px;
     }
 
-    .service-card {
-        padding: 30px 20px;
+    .btn-outline {
+      background: transparent;
+      border: 1px solid #38bdf8;
+      color: #38bdf8;
+    }
+
+    .btn-outline:hover {
+      background: #38bdf8;
+      color: #0b1120;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(56, 189, 248, 0.2);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(56, 189, 248, 0.25);
+      background: #7dd3fc;
+    }
+
+    .hero-image {
+      flex: 1 1 40%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-width: 480px;
+      height: auto;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border-radius: 32px;
+      border: none;
+      box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.6);
+      transition: transform 0.3s ease;
+    }
+
+    .hero-image img:hover {
+      transform: scale(1.02);
+    }
+
+    /* ----- section base ----- */
+    section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.6rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #f0f6ff;
+      margin-bottom: 16px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #94a9c9;
+      max-width: 620px;
+      margin: 0 auto 48px;
+      font-size: 1.05rem;
+    }
+
+    .section-title span {
+      background: linear-gradient(135deg, #38bdf8, #818cf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ----- about ----- */
+    .about-wrap {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .about-image {
+      flex-shrink: 0;
     }
 
     .about-image img {
-        width: 220px;
-        height: 220px;
+      width: 280px;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid rgba(56, 189, 248, 0.25);
+      box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.5);
     }
-}
 
-</style>
+    .about-text h3 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .about-text h3 span {
+      color: #38bdf8;
+    }
+
+    .about-text p {
+      color: #cbd5e1;
+      margin-bottom: 16px;
+      font-size: 1rem;
+    }
+
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .highlight-item {
+      background: #182235;
+      padding: 14px 18px;
+      border-radius: 12px;
+      border-left: 4px solid #38bdf8;
+    }
+
+    .highlight-item strong {
+      color: #7dd3fc;
+      font-weight: 600;
+    }
+
+    /* ----- services ----- */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 28px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .service-card {
+      background: #14203a;
+      padding: 32px 22px;
+      border-radius: 20px;
+      border: 1px solid #253454;
+      transition: all 0.25s ease;
+      text-align: center;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      border-color: #38bdf8;
+      box-shadow: 0 12px 30px -8px rgba(56, 189, 248, 0.12);
+    }
+
+    .service-icon {
+      font-size: 2.8rem;
+      margin-bottom: 12px;
+    }
+
+    .service-card h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #e8edf5;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: #a5b9d6;
+      font-size: 0.95rem;
+    }
+
+    /* ----- skills ----- */
+    .skills-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .skill-tag {
+      background: #1c2a47;
+      padding: 12px 28px;
+      border-radius: 60px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      border: 1px solid #2f4070;
+      transition: 0.2s;
+      color: #d6e2f5;
+    }
+
+    .skill-tag:hover {
+      border-color: #38bdf8;
+      color: #38bdf8;
+      background: #0f1e3a;
+      transform: scale(1.04);
+    }
+
+    /* ----- projects ----- */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .project-card {
+      background: #14203a;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid #253454;
+      transition: 0.25s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      border-color: #38bdf8;
+      box-shadow: 0 16px 32px -12px rgba(0, 0, 0, 0.6);
+    }
+
+    .project-bar {
+      height: 5px;
+      background: linear-gradient(90deg, #38bdf8, #818cf8);
+    }
+
+    .project-body {
+      padding: 24px 26px 28px;
+    }
+
+    .project-body h3 {
+      font-size: 1.25rem;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .project-body p {
+      color: #b0c3df;
+      font-size: 0.95rem;
+      margin-bottom: 14px;
+    }
+
+    .tech-stack {
+      color: #7dd3fc;
+      font-weight: 500;
+      font-size: 0.85rem;
+      margin-bottom: 18px;
+      display: block;
+    }
+
+    .project-link {
+      display: inline-block;
+      padding: 8px 22px;
+      border-radius: 40px;
+      border: 1px solid #38bdf8;
+      color: #38bdf8;
+      font-weight: 500;
+      text-decoration: none;
+      transition: 0.2s;
+      font-size: 0.9rem;
+    }
+
+    .project-link:hover {
+      background: #38bdf8;
+      color: #0b1120;
+    }
+
+    .repo-cta {
+      margin-top: 50px;
+      text-align: center;
+      background: #14203a;
+      padding: 32px 20px;
+      border-radius: 24px;
+      border: 1px solid #253454;
+    }
+
+    .repo-cta p {
+      color: #b0c3df;
+      margin-bottom: 16px;
+    }
+
+    .repo-btn {
+      background: linear-gradient(145deg, #38bdf8, #6366f1);
+      color: #0b1120;
+      font-weight: 600;
+      padding: 12px 34px;
+      border-radius: 60px;
+      text-decoration: none;
+      transition: 0.2s;
+      display: inline-block;
+    }
+
+    .repo-btn:hover {
+      transform: scale(1.04);
+      box-shadow: 0 8px 24px rgba(56, 189, 248, 0.3);
+    }
+
+    /* ----- contact ----- */
+    .contact-card {
+      max-width: 700px;
+      margin: 0 auto;
+      background: #14203a;
+      padding: 40px 36px;
+      border-radius: 28px;
+      border: 1px solid #253454;
+    }
+
+    .contact-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 0;
+      border-bottom: 1px solid #253454;
+    }
+
+    .contact-item:last-of-type {
+      border-bottom: 0;
+    }
+
+    .contact-item strong {
+      color: #a5b9d6;
+      font-weight: 500;
+    }
+
+    .contact-item a {
+      color: #7dd3fc;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    /* ----- footer ----- */
+    footer {
+      text-align: center;
+      padding: 34px 0;
+      color: #6b7fa0;
+      border-top: 1px solid #1b2a48;
+      font-size: 0.9rem;
+    }
+
+    /* ----- fade animation ----- */
+    .fade {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.9s ease, transform 0.9s ease;
+    }
+
+    .fade.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ----- responsive ----- */
+    @media (max-width: 1024px) {
+      .hero h1 {
+        font-size: 3.4rem;
+      }
+      .hero-grid {
+        gap: 40px;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+      .hero-content {
+        text-align: center;
+      }
+      .hero-desc {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .btn-group {
+        justify-content: center;
+      }
+      .hero-image img {
+        max-width: 320px;
+      }
+      .about-wrap {
+        flex-direction: column;
+        text-align: center;
+      }
+      .highlight-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .contact-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.6rem;
+      }
+      .hero-sub {
+        font-size: 1.2rem;
+      }
+      .section-title {
+        font-size: 2rem;
+      }
+      .nav-links {
+        gap: 16px;
+        font-size: 0.9rem;
+      }
+      .logo {
+        font-size: 22px;
+      }
+      .highlight-grid {
+        grid-template-columns: 1fr;
+      }
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero-image img {
+        max-width: 260px;
+      }
+    }
+
+    @media (max-width: 440px) {
+      .btn-group .btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-
-<!-- =========================
-     HEADER
-========================= -->
-
+<!-- header -->
 <header>
-
-<div class="container">
-
-<nav>
-
-<div class="logo">
-Arya T A
-</div>
-
-<ul>
-
-<li><a href="#home">Home</a></li>
-
-<li><a href="#about">About</a></li>
-
-<li><a href="#services">My Services</a></li>
-
-<li><a href="#skills">Skills</a></li>
-
-<li><a href="#projects">Projects</a></li>
-
-<li><a href="#contact">Contact</a></li>
-
-</ul>
-
-</nav>
-
-</div>
-
+  <div class="container">
+    <nav>
+      <div class="logo">Arya T A</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
-
-<!-- =========================
-     HOME
-========================= -->
-
+<!-- home -->
 <section id="home" class="hero">
-
-<div class="hero-container">
-
-
-<!-- LEFT SIDE -->
-
-<div class="hero-content">
-
-<p class="welcome-text">
-WELCOME TO MY PORTFOLIO
-</p>
-
-<h1>
-Hi, I'm <span>Arya T A</span>
-</h1>
-
-<h2>
-Python Full Stack Developer
-</h2>
-
-<p class="hero-description">
-
-I build responsive, user-friendly and scalable
-web applications using Python, Django,
-React.js and modern web technologies.
-
-</p>
-
-<div>
-
-<a href="#projects" class="btn">
-View My Projects
-</a>
-
-<a href="#contact" class="btn btn-outline">
-Hire Me
-</a>
-
-<a href="./resume.pdf"
-download
-class="btn btn-outline">
-
-Download Resume
-
-</a>
-
-</div>
-
-</div>
-
-
-<!-- LARGE RIGHT SIDE IMAGE -->
-
-<div class="hero-image">
-
-<img
-src="./arya.jpg"
-alt="Arya T A - Python Full Stack Developer"
->
-
-</div>
-
-
-</div>
-
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <span class="hero-badge">✦ PORTFOLIO</span>
+      <h1>Hi, I'm <span>Arya T A</span></h1>
+      <div class="hero-sub">Python Full Stack Developer</div>
+      <p class="hero-desc">
+        I craft responsive, user-centric, and scalable web applications
+        with Python, Django, React.js, and modern tooling.
+      </p>
+      <div class="btn-group">
+        <a href="#projects" class="btn">View Projects</a>
+        <a href="#contact" class="btn btn-outline">Hire Me</a>
+        <a href="./resume.pdf" download class="btn btn-outline">Download CV</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="./arya.jpg" alt="Arya T A – Python Full Stack Developer" />
+    </div>
+  </div>
 </section>
 
-
-<!-- =========================
-     ABOUT
-========================= -->
-
+<!-- about -->
 <section id="about" class="fade">
-
-<div class="container">
-
-<h2 class="section-title">
-About Me
-</h2>
-
-<div class="about-content">
-
-<div class="about-image">
-
-<img
-src="./arya.jpg"
-alt="Arya T A"
->
-
-</div>
-
-<div class="about-text">
-
-<h3>
-Hello, I'm <span>Arya T A</span>
-</h3>
-
-<p>
-I am an MCA Graduate and Python Full Stack
-Developer passionate about creating modern
-and efficient web applications.
-</p>
-
-<p>
-I have experience working with Python,
-Django, React.js, JavaScript, HTML, CSS,
-MySQL and Git & GitHub.
-</p>
-
-<p>
-I enjoy learning new technologies and
-developing practical solutions to
-real-world problems.
-</p>
-
-<div class="about-highlights">
-
-<div class="highlight">
-<strong>Role</strong>
-<br>
-Python Full Stack Developer
-</div>
-
-<div class="highlight">
-<strong>Education</strong>
-<br>
-MCA Graduate
-</div>
-
-<div class="highlight">
-<strong>Backend</strong>
-<br>
-Python & Django
-</div>
-
-<div class="highlight">
-<strong>Frontend</strong>
-<br>
-React.js & JavaScript
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
+  <div class="container">
+    <h2 class="section-title">About <span>Me</span></h2>
+    <div class="about-wrap">
+      <div class="about-image">
+        <img src="./arya.jpg" alt="Arya T A" />
+      </div>
+      <div class="about-text">
+        <h3>Hello, I'm <span>Arya T A</span></h3>
+        <p>
+          MCA Graduate and Python Full Stack Developer with a passion for
+          building clean, modern, and efficient web solutions.
+        </p>
+        <p>
+          Experienced in Python, Django, React.js, JavaScript, MySQL, Git, and
+          REST APIs. I enjoy turning complex problems into elegant, maintainable code.
+        </p>
+        <div class="highlight-grid">
+          <div class="highlight-item"><strong>Role</strong><br />Full Stack Developer</div>
+          <div class="highlight-item"><strong>Education</strong><br />MCA Graduate</div>
+          <div class="highlight-item"><strong>Backend</strong><br />Python &amp; Django</div>
+          <div class="highlight-item"><strong>Frontend</strong><br />React &amp; JavaScript</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-
-<!-- =========================
-     SERVICES
-========================= -->
-
+<!-- services -->
 <section id="services" class="fade">
-
-<div class="container">
-
-<h2 class="section-title">
-My Services
-</h2>
-
-<p class="services-intro">
-
-I develop modern, responsive and reliable
-web solutions using frontend and backend
-technologies.
-
-</p>
-
-<div class="services-grid">
-
-
-<div class="service-card">
-
-<div class="service-icon">🐍</div>
-
-<h3>Python Development</h3>
-
-<p>
-Developing efficient and scalable applications
-using Python with clean and maintainable code.
-</p>
-
-</div>
-
-
-<div class="service-card">
-
-<div class="service-icon">⚙️</div>
-
-<h3>Django Development</h3>
-
-<p>
-Building secure backend applications,
-database-driven systems and REST APIs using Django.
-</p>
-
-</div>
-
-
-<div class="service-card">
-
-<div class="service-icon">⚛️</div>
-
-<h3>React Development</h3>
-
-<p>
-Creating modern and interactive user interfaces
-using React.js, JavaScript, HTML and CSS.
-</p>
-
-</div>
-
-
-<div class="service-card">
-
-<div class="service-icon">💻</div>
-
-<h3>Full Stack Development</h3>
-
-<p>
-Developing complete web applications by connecting
-responsive frontend interfaces with powerful backend systems.
-</p>
-
-</div>
-
-
-<div class="service-card">
-
-<div class="service-icon">🔗</div>
-
-<h3>REST API Development</h3>
-
-<p>
-Creating and integrating REST APIs for smooth
-communication between frontend and backend applications.
-</p>
-
-</div>
-
-
-<div class="service-card">
-
-<div class="service-icon">🗄️</div>
-
-<h3>Database Management</h3>
-
-<p>
-Working with MySQL and database-driven applications,
-including CRUD operations and data management.
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
+  <div class="container">
+    <h2 class="section-title">My <span>Services</span></h2>
+    <p class="section-subtitle">
+      End-to-end web development — from design to deployment.
+    </p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🐍</div>
+        <h3>Python Development</h3>
+        <p>Scalable, clean Python applications with robust logic and performance.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">⚙️</div>
+        <h3>Django Backend</h3>
+        <p>Secure, database-driven backends, REST APIs, and admin panels.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">⚛️</div>
+        <h3>React Frontend</h3>
+        <p>Interactive, component-based UIs with React, JS, and modern CSS.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">💻</div>
+        <h3>Full Stack Apps</h3>
+        <p>Complete web applications connecting frontend, backend, and databases.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔗</div>
+        <h3>REST APIs</h3>
+        <p>Well-structured APIs for seamless frontend-backend communication.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🗄️</div>
+        <h3>Database Management</h3>
+        <p>MySQL, modeling, CRUD, and data integrity for production systems.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-
-<!-- =========================
-     SKILLS
-========================= -->
-
+<!-- skills -->
 <section id="skills" class="fade">
-
-<div class="container">
-
-<h2 class="section-title">
-Technical Skills
-</h2>
-
-<div class="skills">
-
-<div class="skill">Python</div>
-
-<div class="skill">Django</div>
-
-<div class="skill">React.js</div>
-
-<div class="skill">JavaScript</div>
-
-<div class="skill">HTML5</div>
-
-<div class="skill">CSS3</div>
-
-<div class="skill">MySQL</div>
-
-<div class="skill">Git & GitHub</div>
-
-</div>
-
-</div>
-
+  <div class="container">
+    <h2 class="section-title">Technical <span>Skills</span></h2>
+    <div class="skills-cloud">
+      <span class="skill-tag">Python</span>
+      <span class="skill-tag">Django</span>
+      <span class="skill-tag">React.js</span>
+      <span class="skill-tag">JavaScript</span>
+      <span class="skill-tag">HTML5</span>
+      <span class="skill-tag">CSS3</span>
+      <span class="skill-tag">MySQL</span>
+      <span class="skill-tag">Git &amp; GitHub</span>
+      <span class="skill-tag">REST APIs</span>
+      <span class="skill-tag">Tailwind CSS</span>
+    </div>
+  </div>
 </section>
 
-
-<!-- =========================
-     PROJECTS
-========================= -->
-
+<!-- projects -->
 <section id="projects" class="fade">
+  <div class="container">
+    <h2 class="section-title">Featured <span>Projects</span></h2>
+    <div class="projects-grid">
+      <!-- alumni -->
+      <div class="project-card">
+        <div class="project-bar"></div>
+        <div class="project-body">
+          <h3>🎓 Alumni Management System</h3>
+          <p>Platform to manage alumni profiles, events, networking, and communication.</p>
+          <span class="tech-stack">Python · Django · HTML · CSS · MySQL</span>
+          <a href="https://github.com/aryamohan053-dev/ALUMEEE" target="_blank" rel="noopener" class="project-link">View Project →</a>
+        </div>
+      </div>
+      <!-- translator -->
+      <div class="project-card">
+        <div class="project-bar"></div>
+        <div class="project-body">
+          <h3>🌐 React Text Translator</h3>
+          <p>Modern React app for text translation and random text generation.</p>
+          <span class="tech-stack">React · Vite · JavaScript · Tailwind</span>
+          <a href="https://github.com/aryamohan053-dev/react-text-translator-random-generator" target="_blank" rel="noopener" class="project-link">View Project →</a>
+        </div>
+      </div>
+      <!-- patient dashboard -->
+      <div class="project-card">
+        <div class="project-bar"></div>
+        <div class="project-body">
+          <h3>🏥 Patient Dashboard</h3>
+          <p>Interactive healthcare dashboard displaying patient data via REST API.</p>
+          <span class="tech-stack">React · JavaScript · REST API</span>
+          <a href="https://github.com/aryamohan053-dev/patient-dashboard2" target="_blank" rel="noopener" class="project-link">View Project →</a>
+        </div>
+      </div>
+    </div>
 
-<div class="container">
-
-<h2 class="section-title">
-Featured Projects
-</h2>
-
-<div class="projects">
-
-
-<!-- ALUMNI -->
-
-<div class="project-card">
-
-<div class="project-top"></div>
-
-<div class="project-content">
-
-<h3>
-🎓 Alumni Management System
-</h3>
-
-<p>
-A web-based platform for managing alumni
-profiles, students, events, networking and communication.
-</p>
-
-<div class="tech">
-Python • Django • HTML • CSS • MySQL
-</div>
-
-<a
-href="https://github.com/aryamohan053-dev/ALUMEEE"
-target="_blank"
-rel="noopener noreferrer"
-class="project-btn">
-
-View Project →
-
-</a>
-
-</div>
-
-</div>
-
-
-<!-- TRANSLATOR -->
-
-<div class="project-card">
-
-<div class="project-top"></div>
-
-<div class="project-content">
-
-<h3>
-🌐 React Text Translator
-</h3>
-
-<p>
-A modern React application for text translation
-and random text generation with a responsive interface.
-</p>
-
-<div class="tech">
-React • Vite • JavaScript • Tailwind CSS
-</div>
-
-<a
-href="https://github.com/aryamohan053-dev/react-text-translator-random-generator"
-target="_blank"
-rel="noopener noreferrer"
-class="project-btn">
-
-View Project →
-
-</a>
-
-</div>
-
-</div>
-
-
-<!-- PATIENT DASHBOARD -->
-
-<div class="project-card">
-
-<div class="project-top"></div>
-
-<div class="project-content">
-
-<h3>
-🏥 Patient Dashboard
-</h3>
-
-<p>
-Interactive healthcare dashboard for displaying
-patient information using a modern frontend interface and REST API.
-</p>
-
-<div class="tech">
-React • JavaScript • REST API
-</div>
-
-<a
-href="https://github.com/aryamohan053-dev/patient-dashboard2"
-target="_blank"
-rel="noopener noreferrer"
-class="project-btn">
-
-View Project →
-
-</a>
-
-</div>
-
-</div>
-
-
-</div>
-
-
-<!-- ALL REPOSITORIES -->
-
-<div class="all-projects">
-
-<p>
-Want to see more of my projects and work?
-</p>
-
-<a
-href="https://github.com/aryamohan053-dev?tab=repositories"
-target="_blank"
-rel="noopener noreferrer"
-class="all-projects-btn">
-
-📂 View All Repositories
-
-</a>
-
-</div>
-
-</div>
-
+    <div class="repo-cta">
+      <p>Explore more of my work on GitHub.</p>
+      <a href="https://github.com/aryamohan053-dev?tab=repositories" target="_blank" rel="noopener" class="repo-btn">📂 All Repositories</a>
+    </div>
+  </div>
 </section>
 
-
-<!-- =========================
-     CONTACT
-========================= -->
-
+<!-- contact -->
 <section id="contact" class="fade">
-
-<div class="container contact">
-
-<h2 class="section-title">
-Contact Me
-</h2>
-
-<div class="contact-content">
-
-<div class="contact-item">
-
-<strong>📧 Email</strong>
-
-<br>
-
-<a href="mailto:aryamohan053@gmail.com">
-aryamohan053@gmail.com
-</a>
-
-</div>
-
-
-<div class="contact-item">
-
-<strong>💻 GitHub</strong>
-
-<br>
-
-<a
-href="https://github.com/aryamohan053-dev"
-target="_blank"
-rel="noopener noreferrer">
-
-github.com/aryamohan053-dev
-
-</a>
-
-</div>
-
-
-<div class="contact-item">
-
-<strong>🔗 LinkedIn</strong>
-
-<br>
-
-<a
-href="linkedin.com/in/arya-ta"
-target="_blank"
-rel="noopener noreferrer">
-
-linkedin.com/in/arya-ta
-
-</a>
-
-</div>
-
-
-<div class="contact-item">
-
-<strong>📍 Location</strong>
-
-<br>
-
-Kerala, India
-
-</div>
-
-</div>
-
-</div>
-
+  <div class="container">
+    <h2 class="section-title">Get in <span>Touch</span></h2>
+    <div class="contact-card">
+      <div class="contact-item"><strong>📧 Email</strong> <a href="mailto:aryamohan053@gmail.com">aryamohan053@gmail.com</a></div>
+      <div class="contact-item"><strong>💻 GitHub</strong> <a href="https://github.com/aryamohan053-dev" target="_blank" rel="noopener">github.com/aryamohan053-dev</a></div>
+      <div class="contact-item"><strong>🔗 LinkedIn</strong> <a href="https://linkedin.com/in/arya-ta" target="_blank" rel="noopener">linkedin.com/in/arya-ta</a></div>
+      <div class="contact-item"><strong>📍 Location</strong> <span style="color:#b0c3df;">Kerala, India</span></div>
+    </div>
+  </div>
 </section>
 
-
-<!-- =========================
-     FOOTER
-========================= -->
-
+<!-- footer -->
 <footer>
-
-<p>
-© 2026 Arya T A | Python Full Stack Developer
-</p>
-
+  <div class="container">
+    © 2026 Arya T A · Python Full Stack Developer
+  </div>
 </footer>
 
-
-<!-- =========================
-     JAVASCRIPT
-========================= -->
-
+<!-- scroll fade -->
 <script>
-
-const sections =
-document.querySelectorAll('.fade');
-
-function showSections() {
-
-    sections.forEach(section => {
-
-        const position =
-        section.getBoundingClientRect().top;
-
-        if(position <
-        window.innerHeight - 100) {
-
-            section.classList.add('show');
-
+  (function() {
+    const fadeEls = document.querySelectorAll('.fade');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
         }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -20px 0px' });
 
-    });
+    fadeEls.forEach(el => observer.observe(el));
 
-}
-
-window.addEventListener(
-'scroll',
-showSections
-);
-
-showSections();
-
+    // if any are already visible
+    setTimeout(() => {
+      fadeEls.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 60) {
+          el.classList.add('show');
+        }
+      });
+    }, 120);
+  })();
 </script>
 
 </body>
