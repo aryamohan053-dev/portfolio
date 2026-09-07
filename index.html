@@ -1,411 +1,988 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arya T A | Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Arya T A | Python Full Stack Developer</title>
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
+    <meta name="description"
+        content="Arya T A - Python Full Stack Developer and MCA Graduate. Portfolio showcasing Python, Django, React.js and web development projects.">
 
-body{
-    background:#0f172a;
-    color:white;
-    line-height:1.6;
-}
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-}
+    <style>
 
-header{
-    padding:20px 0;
-    position:sticky;
-    top:0;
-    background:#0f172a;
-    z-index:100;
-}
+        /* =========================
+           GLOBAL
+        ========================= */
 
-nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
 
-.logo{
-    font-size:28px;
-    font-weight:bold;
-    color:#38bdf8;
-}
+        body {
+            background: #0f172a;
+            color: white;
+            line-height: 1.6;
+        }
 
-nav ul{
-    display:flex;
-    list-style:none;
-}
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
 
-nav ul li{
-    margin-left:25px;
-}
+        /* =========================
+           HEADER
+        ========================= */
 
-nav ul li a{
-    text-decoration:none;
-    color:white;
-    transition:0.3s;
-}
+        header {
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            background: #0f172a;
+            z-index: 1000;
+            border-bottom: 1px solid #1e293b;
+        }
 
-nav ul li a:hover{
-    color:#38bdf8;
-}
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-.hero{
-    min-height:90vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-}
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #38bdf8;
+        }
 
-.hero h1{
-    font-size:60px;
-}
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
 
-.hero span{
-    color:#38bdf8;
-}
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: 0.3s;
+        }
 
-.hero p{
-    margin:20px 0;
-    font-size:18px;
-    color:#cbd5e1;
-}
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
 
-.btn{
-    display:inline-block;
-    padding:12px 25px;
-    background:#38bdf8;
-    color:#000;
-    text-decoration:none;
-    border-radius:8px;
-    font-weight:600;
-    margin:10px;
-}
+        /* =========================
+           HERO
+        ========================= */
 
-section{
-    padding:80px 0;
-}
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
 
-.section-title{
-    text-align:center;
-    margin-bottom:40px;
-    font-size:40px;
-    color:#38bdf8;
-}
+        .hero h1 {
+            font-size: 60px;
+            line-height: 1.2;
+        }
 
-.about-content{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:50px;
-    max-width:900px;
-    margin:auto;
-}
+        .hero h1 span {
+            color: #38bdf8;
+        }
 
-.about-image img{
-    width:220px;
-    height:220px;
-    object-fit:cover;
-    border-radius:50%;
-    border:5px solid #38bdf8;
-}
+        .hero p {
+            margin: 20px 0;
+            font-size: 20px;
+            color: #cbd5e1;
+        }
 
-.about-text{
-    flex:1;
-    color:#cbd5e1;
-    font-size:17px;
-}
+        .hero-description {
+            max-width: 700px;
+            margin: auto;
+        }
 
-@media(max-width:768px){
-    .about-content{
-        flex-direction:column;
-        text-align:center;
-    }
-}
+        /* =========================
+           BUTTONS
+        ========================= */
 
-.skills{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-    gap:20px;
-}
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #38bdf8;
+            color: #020617;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            margin: 10px 5px;
+            transition: 0.3s;
+        }
 
-.skill{
-    background:#1e293b;
-    padding:20px;
-    border-radius:12px;
-    text-align:center;
-}
+        .btn:hover {
+            transform: translateY(-3px);
+            background: #7dd3fc;
+        }
 
-.projects{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:25px;
-}
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #38bdf8;
+            color: #38bdf8;
+        }
 
-.project-card{
-    background:#1e293b;
-    border-radius:15px;
-    overflow:hidden;
-    transition:.3s;
-}
+        .btn-outline:hover {
+            background: #38bdf8;
+            color: #020617;
+        }
 
-.project-card:hover{
-    transform:translateY(-10px);
-}
+        /* =========================
+           SECTIONS
+        ========================= */
 
-.project-content{
-    padding:20px;
-}
+        section {
+            padding: 90px 0;
+        }
 
-.project-content h3{
-    margin-bottom:10px;
-}
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 40px;
+            color: #38bdf8;
+        }
 
-.contact{
-    text-align:center;
-}
+        /* =========================
+           ABOUT
+        ========================= */
 
-.contact a{
-    color:#38bdf8;
-    text-decoration:none;
-}
+        .about-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 60px;
+            max-width: 1000px;
+            margin: auto;
+        }
 
-footer{
-    text-align:center;
-    padding:25px;
-    background:#020617;
-}
+        .about-image {
+            flex-shrink: 0;
+            text-align: center;
+        }
 
-.fade{
-    opacity:0;
-    transform:translateY(30px);
-    transition:1s;
-}
+        .about-image img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #38bdf8;
+            box-shadow: 0 0 30px rgba(56, 189, 248, 0.25);
+        }
 
-.fade.show{
-    opacity:1;
-    transform:translateY(0);
-}
-</style>
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .about-text h3 span {
+            color: #38bdf8;
+        }
+
+        .about-text p {
+            color: #cbd5e1;
+            font-size: 17px;
+            margin-bottom: 15px;
+        }
+
+        .about-highlights {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .highlight {
+            background: #1e293b;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 3px solid #38bdf8;
+        }
+
+        .highlight strong {
+            color: #38bdf8;
+        }
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .skill {
+            background: #1e293b;
+            padding: 22px;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: 500;
+            transition: 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .skill:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+            color: #38bdf8;
+        }
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background: #1e293b;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: 0.3s;
+            border: 1px solid #334155;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            border-color: #38bdf8;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-top {
+            height: 8px;
+            background: #38bdf8;
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .project-content h3 {
+            margin-bottom: 12px;
+            font-size: 21px;
+        }
+
+        .project-content p {
+            color: #cbd5e1;
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+
+        .tech {
+            color: #38bdf8;
+            font-size: 14px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .project-btn {
+            display: inline-block;
+            padding: 9px 18px;
+            border: 1px solid #38bdf8;
+            border-radius: 7px;
+            color: #38bdf8;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .project-btn:hover {
+            background: #38bdf8;
+            color: #020617;
+        }
+
+        /* =========================
+           ALL PROJECTS
+        ========================= */
+
+        .all-projects {
+            text-align: center;
+            margin-top: 50px;
+            padding: 30px;
+            background: #1e293b;
+            border-radius: 15px;
+        }
+
+        .all-projects p {
+            color: #cbd5e1;
+            margin-bottom: 15px;
+        }
+
+        .all-projects-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #38bdf8;
+            color: #020617;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .all-projects-btn:hover {
+            transform: translateY(-3px);
+            background: #7dd3fc;
+        }
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact-content {
+            max-width: 700px;
+            margin: auto;
+            background: #1e293b;
+            padding: 35px;
+            border-radius: 15px;
+        }
+
+        .contact-item {
+            margin: 18px 0;
+            font-size: 17px;
+        }
+
+        .contact-item strong {
+            color: #38bdf8;
+        }
+
+        .contact a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #020617;
+            color: #94a3b8;
+        }
+
+        /* =========================
+           SCROLL ANIMATION
+        ========================= */
+
+        .fade {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: 1s;
+        }
+
+        .fade.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 768px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-text {
+                text-align: center;
+            }
+
+            .about-highlights {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .logo {
+                font-size: 24px;
+            }
+
+            nav ul li a {
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .about-image img {
+                width: 200px;
+                height: 200px;
+            }
+
+            .btn {
+                display: block;
+                width: 220px;
+                margin: 10px auto;
+            }
+        }
+
+    </style>
 </head>
+
 <body>
 
-<header>
-<div class="container">
-<nav>
-<div class="logo">Arya T A</div>
+    <!-- =========================
+         HEADER
+    ========================= -->
 
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</nav>
-</div>
-</header>
+    <header>
 
-<section class="hero">
-<div>
-<h1>Hi, I'm <span>Arya T A</span></h1>
-<p>Python Full Stack Developer | MCA Graduate</p>
+        <div class="container">
 
-<a href="#projects" class="btn">View Projects</a>
-<a href="./resume.pdf" download class="btn">
-    Download Resume
-</a>
-</div>
-</section>
+            <nav>
 
-<section id="about" class="fade">
-    <div class="container about">
+                <div class="logo">
+                    Arya T A
+                </div>
 
-        <h2 class="section-title">About Me</h2>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
 
-        <div class="about-content">
+            </nav>
 
-            <div class="about-image">
-                <img src="./arya.jpg" alt="Arya T A">
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="hero">
+
+        <div>
+
+            <h1>
+                Hi, I'm <span>Arya T A</span>
+            </h1>
+
+            <p>
+                Python Full Stack Developer | MCA Graduate
+            </p>
+
+            <p class="hero-description">
+                I build responsive, user-friendly and scalable web
+                applications using Python, Django, React.js and modern
+                web technologies.
+            </p>
+
+            <div>
+
+                <a href="#projects" class="btn">
+                    View Projects
+                </a>
+
+                <a href="./resume.pdf" download class="btn btn-outline">
+                    Download Resume
+                </a>
+
             </div>
 
-            <div class="about-text">
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
+
+    <section id="about" class="fade">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                About Me
+            </h2>
+
+            <div class="about-content">
+
+                <!-- PROFILE IMAGE -->
+
+                <div class="about-image">
+
+                    <!--
+                    IMPORTANT:
+                    Put your image in the same folder as index.html.
+
+                    Example:
+                    portfolio/
+                    ├── index.html
+                    ├── profile.jpg
+                    └── resume.pdf
+
+                    If your image has another name,
+                    change profile.jpg below.
+                    -->
+
+                    <img
+                        src="./profile.jpg"
+                        alt="Arya T A - Python Full Stack Developer">
+
+                </div>
+
+
+                <!-- ABOUT TEXT -->
+
+                <div class="about-text">
+
+                    <h3>
+                        Hello, I'm <span>Arya T A</span>
+                    </h3>
+
+                    <p>
+                        I am an MCA Graduate and Python Full Stack Developer
+                        passionate about creating modern and efficient web
+                        applications.
+                    </p>
+
+                    <p>
+                        I have experience working with Python, Django,
+                        React.js, JavaScript, HTML, CSS, MySQL and Git &
+                        GitHub. I enjoy learning new technologies and
+                        developing practical solutions to real-world
+                        problems.
+                    </p>
+
+                    <p>
+                        My goal is to grow as a software developer while
+                        contributing to meaningful projects and building
+                        high-quality user experiences.
+                    </p>
+
+
+                    <div class="about-highlights">
+
+                        <div class="highlight">
+                            <strong>Role</strong><br>
+                            Python Full Stack Developer
+                        </div>
+
+                        <div class="highlight">
+                            <strong>Education</strong><br>
+                            MCA Graduate
+                        </div>
+
+                        <div class="highlight">
+                            <strong>Backend</strong><br>
+                            Python & Django
+                        </div>
+
+                        <div class="highlight">
+                            <strong>Frontend</strong><br>
+                            React.js & JavaScript
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SKILLS
+    ========================= -->
+
+    <section id="skills" class="fade">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Skills
+            </h2>
+
+            <div class="skills">
+
+                <div class="skill">
+                    Python
+                </div>
+
+                <div class="skill">
+                    Django
+                </div>
+
+                <div class="skill">
+                    React.js
+                </div>
+
+                <div class="skill">
+                    JavaScript
+                </div>
+
+                <div class="skill">
+                    HTML5
+                </div>
+
+                <div class="skill">
+                    CSS3
+                </div>
+
+                <div class="skill">
+                    MySQL
+                </div>
+
+                <div class="skill">
+                    Git & GitHub
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROJECTS
+    ========================= -->
+
+    <section id="projects" class="fade">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Featured Projects
+            </h2>
+
+
+            <div class="projects">
+
+
+                <!-- PROJECT 1 -->
+
+                <div class="project-card">
+
+                    <div class="project-top"></div>
+
+                    <div class="project-content">
+
+                        <h3>
+                            🎓 Alumni Management System
+                        </h3>
+
+                        <p>
+                            A web-based platform for managing alumni
+                            profiles, students, events, networking and
+                            communication.
+                        </p>
+
+                        <div class="tech">
+                            Python • Django • HTML • CSS • MySQL
+                        </div>
+
+                        <a
+                            href="https://github.com/aryamohan053-dev/ALUMEEE"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-btn">
+
+                            View Project →
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROJECT 2 -->
+
+                <div class="project-card">
+
+                    <div class="project-top"></div>
+
+                    <div class="project-content">
+
+                        <h3>
+                            🌐 React Text Translator
+                        </h3>
+
+                        <p>
+                            A modern React application for text translation
+                            and random text generation with a responsive
+                            user interface.
+                        </p>
+
+                        <div class="tech">
+                            React • Vite • JavaScript • Tailwind CSS
+                        </div>
+
+                        <a
+                            href="https://github.com/aryamohan053-dev/react-text-translator-random-generator"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-btn">
+
+                            View Project →
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROJECT 3 -->
+
+                <div class="project-card">
+
+                    <div class="project-top"></div>
+
+                    <div class="project-content">
+
+                        <h3>
+                            🏥 Patient Dashboard
+                        </h3>
+
+                        <p>
+                            Interactive healthcare dashboard for displaying
+                            patient information using a modern frontend
+                            interface and REST API.
+                        </p>
+
+                        <div class="tech">
+                            React • JavaScript • REST API
+                        </div>
+
+                        <a
+                            href="https://github.com/aryamohan053-dev/patient-dashboard2"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-btn">
+
+                            View Project →
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- VIEW ALL GITHUB REPOSITORIES -->
+
+            <div class="all-projects">
+
                 <p>
-                    MCA Graduate and Python Full Stack Developer with experience
-                    in Django, React.js, MySQL, JavaScript, HTML and CSS.
-                    Passionate about building scalable web applications and
-                    solving real-world problems through technology.
+                    Want to see more of my projects and work?
                 </p>
+
+                <a
+                    href="https://github.com/aryamohan053-dev?tab=repositories"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="all-projects-btn">
+
+                    📂 View All Repositories
+
+                </a>
+
             </div>
 
         </div>
 
-    </div>
-</section>
+    </section>
 
-<section id="skills" class="fade">
-<div class="container">
-<h2 class="section-title">Skills</h2>
 
-<div class="skills">
-<div class="skill">Python</div>
-<div class="skill">Django</div>
-<div class="skill">React.js</div>
-<div class="skill">JavaScript</div>
-<div class="skill">HTML5</div>
-<div class="skill">CSS3</div>
-<div class="skill">MySQL</div>
-<div class="skill">Git & GitHub</div>
-</div>
-</div>
-</section>
+    <!-- =========================
+         CONTACT
+    ========================= -->
 
-<section id="projects" class="fade">
-<div class="container">
+    <section id="contact" class="fade">
 
-<section id="projects" class="fade">
-<div class="container">
+        <div class="container contact">
 
-<h2 class="section-title">Featured Projects</h2>
+            <h2 class="section-title">
+                Contact Me
+            </h2>
 
-<div class="projects">
+            <div class="contact-content">
 
-    <!-- Project 1 -->
-    <div class="project-card">
-        <div class="project-content">
-            <h3>🎓 Alumni Management System</h3>
+                <div class="contact-item">
 
-            <p>
-                A web-based platform for managing alumni profiles,
-                students, events, networking and communication.
-            </p>
+                    <strong>📧 Email</strong><br>
 
-            <div class="tech">
-                Python • Django • HTML • CSS • MySQL
+                    <a href="mailto:yourmail@gmail.com">
+                        yourmail@gmail.com
+                    </a>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <strong>💻 GitHub</strong><br>
+
+                    <a
+                        href="https://github.com/aryamohan053-dev"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        github.com/aryamohan053-dev
+
+                    </a>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <strong>🔗 LinkedIn</strong><br>
+
+                    <!-- Replace # with your LinkedIn profile URL -->
+
+                    <a
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        LinkedIn Profile
+
+                    </a>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <strong>📍 Location</strong><br>
+
+                    Kerala, India
+
+                </div>
+
             </div>
 
-            <a
-                href="https://github.com/aryamohan053-dev/ALUMEEE"
-                target="_blank"
-                class="project-btn">
-                View Project →
-            </a>
         </div>
-    </div>
+
+    </section>
 
 
-    <!-- Project 2 -->
-    <div class="project-card">
-        <div class="project-content">
-            <h3>🌐 React Text Translator</h3>
+    <!-- =========================
+         FOOTER
+    ========================= -->
 
-            <p>
-                A modern React application for text translation
-                and random text generation with a responsive UI.
-            </p>
+    <footer>
 
-            <div class="tech">
-                React • Vite • JavaScript • Tailwind CSS
-            </div>
+        <p>
+            © 2026 Arya T A | Python Full Stack Developer
+        </p>
 
-            <a
-                href="https://github.com/aryamohan053-dev/react-text-translator-random-generator"
-                target="_blank"
-                class="project-btn">
-                View Project →
-            </a>
-        </div>
-    </div>
+    </footer>
 
 
-    <!-- Project 3 -->
-    <div class="project-card">
-        <div class="project-content">
-            <h3>🏥 Patient Dashboard</h3>
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
 
-            <p>
-                Interactive healthcare dashboard for displaying
-                patient information using a modern frontend interface.
-            </p>
+    <script>
 
-            <div class="tech">
-                React • JavaScript • REST API
-            </div>
+        const sections = document.querySelectorAll('.fade');
 
-            <a
-                href="https://github.com/aryamohan053-dev/patient-dashboard2"
-                target="_blank"
-                class="project-btn">
-                View Project →
-            </a>
-        </div>
-    </div>
+        function showSections() {
 
-</div>
+            sections.forEach(section => {
 
+                const position =
+                    section.getBoundingClientRect().top;
 
-<!-- View All Repositories -->
+                if (position < window.innerHeight - 100) {
 
-<div class="all-projects">
+                    section.classList.add('show');
 
-    <p>
-        Want to see more of my work?
-    </p>
+                }
 
-    <a
-        href="https://github.com/aryamohan053-dev?tab=repositories"
-        target="_blank"
-        class="all-projects-btn">
-        📂 View All Repositories
-    </a>
+            });
 
-</div>
+        }
 
-</div>
-</section>
-<section id="contact" class="fade">
-<div class="container contact">
-<h2 class="section-title">Contact Me</h2>
+        window.addEventListener('scroll', showSections);
 
-<p>Email: <a href="mailto:yourmail@gmail.com">yourmail@gmail.com</a></p>
-<p>GitHub: <a href="https://github.com/aryamohan053-dev">github.com/aryamohan053-dev</a></p>
-<p>LinkedIn: <a href="#">Your LinkedIn Profile</a></p>
-</div>
-</section>
+        /* Show visible sections when page loads */
+        showSections();
 
-<footer>
-<p>© 2026 Arya T A | Python Full Stack Developer</p>
-</footer>
-
-<script>
-const sections=document.querySelectorAll('.fade');
-
-window.addEventListener('scroll',()=>{
-sections.forEach(section=>{
-const position=section.getBoundingClientRect().top;
-
-if(position < window.innerHeight-100){
-section.classList.add('show');
-}
-});
-});
-</script>
+    </script>
 
 </body>
+
 </html>
+```
