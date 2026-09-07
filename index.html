@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -42,15 +41,17 @@
             margin: auto;
         }
 
+
         /* =========================
-           HEADER
+           HEADER / NAVBAR
         ========================= */
 
         header {
             padding: 20px 0;
             position: sticky;
             top: 0;
-            background: #0f172a;
+            background: rgba(15, 23, 42, 0.96);
+            backdrop-filter: blur(10px);
             z-index: 1000;
             border-bottom: 1px solid #1e293b;
         }
@@ -84,8 +85,9 @@
             color: #38bdf8;
         }
 
+
         /* =========================
-           HERO
+           HERO / HOME
         ========================= */
 
         .hero {
@@ -94,7 +96,19 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 40px 20px;
+            padding: 60px 20px;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .welcome-text {
+            color: #38bdf8;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
         }
 
         .hero h1 {
@@ -106,16 +120,24 @@
             color: #38bdf8;
         }
 
+        .hero h2 {
+            font-size: 28px;
+            margin-top: 15px;
+            color: #e2e8f0;
+        }
+
         .hero p {
             margin: 20px 0;
-            font-size: 20px;
+            font-size: 19px;
             color: #cbd5e1;
         }
 
         .hero-description {
             max-width: 700px;
-            margin: auto;
+            margin: auto !important;
+            line-height: 1.8;
         }
+
 
         /* =========================
            BUTTONS
@@ -136,6 +158,7 @@
         .btn:hover {
             transform: translateY(-3px);
             background: #7dd3fc;
+            box-shadow: 0 8px 20px rgba(56, 189, 248, 0.25);
         }
 
         .btn-outline {
@@ -148,6 +171,7 @@
             background: #38bdf8;
             color: #020617;
         }
+
 
         /* =========================
            SECTIONS
@@ -164,6 +188,7 @@
             color: #38bdf8;
         }
 
+
         /* =========================
            ABOUT
         ========================= */
@@ -173,7 +198,7 @@
             align-items: center;
             justify-content: center;
             gap: 60px;
-            max-width: 1000px;
+            max-width: 1050px;
             margin: auto;
         }
 
@@ -182,14 +207,14 @@
             text-align: center;
         }
 
-      .about-image img {
-    width: 350px;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 6px solid #38bdf8;
-    box-shadow: 0 0 35px rgba(56, 189, 248, 0.3);
-}
+        .about-image img {
+            width: 350px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 6px solid #38bdf8;
+            box-shadow: 0 0 35px rgba(56, 189, 248, 0.3);
+        }
 
         .about-text {
             flex: 1;
@@ -228,6 +253,60 @@
             color: #38bdf8;
         }
 
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services-intro {
+            max-width: 700px;
+            margin: -25px auto 45px;
+            text-align: center;
+            color: #cbd5e1;
+            font-size: 17px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .service-card {
+            background: #1e293b;
+            padding: 35px 25px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid #334155;
+            transition: 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: #38bdf8;
+            box-shadow: 0 10px 30px rgba(56, 189, 248, 0.15);
+        }
+
+        .service-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            color: #38bdf8;
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: #cbd5e1;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+
         /* =========================
            SKILLS
         ========================= */
@@ -254,13 +333,14 @@
             color: #38bdf8;
         }
 
+
         /* =========================
            PROJECTS
         ========================= */
 
         .projects {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 25px;
         }
 
@@ -320,6 +400,7 @@
             color: #020617;
         }
 
+
         /* =========================
            ALL PROJECTS
         ========================= */
@@ -330,6 +411,7 @@
             padding: 30px;
             background: #1e293b;
             border-radius: 15px;
+            border: 1px solid #334155;
         }
 
         .all-projects p {
@@ -353,6 +435,7 @@
             background: #7dd3fc;
         }
 
+
         /* =========================
            CONTACT
         ========================= */
@@ -367,6 +450,7 @@
             background: #1e293b;
             padding: 35px;
             border-radius: 15px;
+            border: 1px solid #334155;
         }
 
         .contact-item {
@@ -387,6 +471,7 @@
             text-decoration: underline;
         }
 
+
         /* =========================
            FOOTER
         ========================= */
@@ -397,6 +482,7 @@
             background: #020617;
             color: #94a3b8;
         }
+
 
         /* =========================
            SCROLL ANIMATION
@@ -412,6 +498,33 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .projects {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-content {
+                gap: 40px;
+            }
+
+            .about-image img {
+                width: 300px;
+                height: 300px;
+            }
+
+        }
+
 
         /* =========================
            MOBILE
@@ -430,8 +543,16 @@
                 justify-content: center;
             }
 
+            .hero {
+                min-height: 80vh;
+            }
+
             .hero h1 {
                 font-size: 40px;
+            }
+
+            .hero h2 {
+                font-size: 23px;
             }
 
             .hero p {
@@ -454,7 +575,21 @@
             .section-title {
                 font-size: 32px;
             }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
         }
+
+
+        /* =========================
+           SMALL MOBILE
+        ========================= */
 
         @media (max-width: 480px) {
 
@@ -462,30 +597,50 @@
                 font-size: 24px;
             }
 
+            nav ul {
+                gap: 10px;
+            }
+
             nav ul li a {
-                font-size: 14px;
+                font-size: 13px;
             }
 
             .hero h1 {
                 font-size: 32px;
             }
 
+            .hero h2 {
+                font-size: 20px;
+            }
+
+            .welcome-text {
+                font-size: 12px;
+                letter-spacing: 2px;
+            }
+
             .about-image img {
-                width: 200px;
-                height: 200px;
+                width: 220px;
+                height: 220px;
             }
 
             .btn {
                 display: block;
-                width: 220px;
+                width: 230px;
                 margin: 10px auto;
             }
+
+            .service-card {
+                padding: 30px 20px;
+            }
+
         }
 
     </style>
 </head>
 
+
 <body>
+
 
     <!-- =========================
          HEADER
@@ -502,10 +657,31 @@
                 </div>
 
                 <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+
+                    <li>
+                        <a href="#services">My Services</a>
+                    </li>
+
+                    <li>
+                        <a href="#skills">Skills</a>
+                    </li>
+
+                    <li>
+                        <a href="#projects">Projects</a>
+                    </li>
+
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+
                 </ul>
 
             </nav>
@@ -516,20 +692,24 @@
 
 
     <!-- =========================
-         HERO
+         HOME
     ========================= -->
 
-    <section class="hero">
+    <section id="home" class="hero">
 
-        <div>
+        <div class="hero-content">
+
+            <p class="welcome-text">
+                WELCOME TO MY PORTFOLIO
+            </p>
 
             <h1>
                 Hi, I'm <span>Arya T A</span>
             </h1>
 
-            <p>
-                Python Full Stack Developer | MCA Graduate
-            </p>
+            <h2>
+                Python Full Stack Developer
+            </h2>
 
             <p class="hero-description">
                 I build responsive, user-friendly and scalable web
@@ -540,7 +720,11 @@
             <div>
 
                 <a href="#projects" class="btn">
-                    View Projects
+                    View My Projects
+                </a>
+
+                <a href="#contact" class="btn btn-outline">
+                    Hire Me
                 </a>
 
                 <a href="./resume.pdf" download class="btn btn-outline">
@@ -568,23 +752,10 @@
 
             <div class="about-content">
 
+
                 <!-- PROFILE IMAGE -->
 
                 <div class="about-image">
-
-                    <!--
-                    IMPORTANT:
-                    Put your image in the same folder as index.html.
-
-                    Example:
-                    portfolio/
-                    ├── index.html
-                    ├── arya.jpg
-                    └── resume.pdf
-
-                    If your image has another name,
-                    change profile.jpg below.
-                    -->
 
                     <img
                         src="./arya.jpg"
@@ -656,6 +827,154 @@
 
 
     <!-- =========================
+         MY SERVICES
+    ========================= -->
+
+    <section id="services" class="fade">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                My Services
+            </h2>
+
+            <p class="services-intro">
+                I develop modern, responsive and reliable web solutions
+                using frontend and backend technologies.
+            </p>
+
+
+            <div class="services-grid">
+
+
+                <!-- SERVICE 1 -->
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        🐍
+                    </div>
+
+                    <h3>
+                        Python Development
+                    </h3>
+
+                    <p>
+                        Developing efficient and scalable applications
+                        using Python with clean and maintainable code.
+                    </p>
+
+                </div>
+
+
+                <!-- SERVICE 2 -->
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        ⚙️
+                    </div>
+
+                    <h3>
+                        Django Development
+                    </h3>
+
+                    <p>
+                        Building secure backend applications, database-driven
+                        systems and REST APIs using Django.
+                    </p>
+
+                </div>
+
+
+                <!-- SERVICE 3 -->
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        ⚛️
+                    </div>
+
+                    <h3>
+                        React Development
+                    </h3>
+
+                    <p>
+                        Creating modern and interactive user interfaces
+                        using React.js, JavaScript, HTML and CSS.
+                    </p>
+
+                </div>
+
+
+                <!-- SERVICE 4 -->
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        💻
+                    </div>
+
+                    <h3>
+                        Full Stack Development
+                    </h3>
+
+                    <p>
+                        Developing complete web applications by connecting
+                        responsive frontend interfaces with powerful backend systems.
+                    </p>
+
+                </div>
+
+
+                <!-- SERVICE 5 -->
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        🔗
+                    </div>
+
+                    <h3>
+                        REST API Development
+                    </h3>
+
+                    <p>
+                        Creating and integrating REST APIs for smooth
+                        communication between frontend and backend applications.
+                    </p>
+
+                </div>
+
+
+                <!-- SERVICE 6 -->
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        🗄️
+                    </div>
+
+                    <h3>
+                        Database Management
+                    </h3>
+
+                    <p>
+                        Working with MySQL and database-driven applications,
+                        including CRUD operations and data management.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
          SKILLS
     ========================= -->
 
@@ -664,7 +983,7 @@
         <div class="container">
 
             <h2 class="section-title">
-                Skills
+                Technical Skills
             </h2>
 
             <div class="skills">
@@ -838,7 +1157,7 @@
             </div>
 
 
-            <!-- VIEW ALL GITHUB REPOSITORIES -->
+            <!-- ALL GITHUB PROJECTS -->
 
             <div class="all-projects">
 
@@ -877,6 +1196,7 @@
 
             <div class="contact-content">
 
+
                 <div class="contact-item">
 
                     <strong>📧 Email</strong><br>
@@ -908,8 +1228,6 @@
 
                     <strong>🔗 LinkedIn</strong><br>
 
-                    <!-- Replace # with your LinkedIn profile URL -->
-
                     <a
                         href="#"
                         target="_blank"
@@ -929,6 +1247,7 @@
                     Kerala, India
 
                 </div>
+
 
             </div>
 
@@ -977,12 +1296,11 @@
 
         window.addEventListener('scroll', showSections);
 
-        /* Show visible sections when page loads */
         showSections();
 
     </script>
 
+
 </body>
 
 </html>
-```
